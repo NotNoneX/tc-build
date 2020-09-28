@@ -13,11 +13,11 @@ function msg() {
 # Build LLVM
 msg "Building LLVM..."
 ./build-llvm.py \
-	--clang-vendor "Proton" \
+	--clang-vendor "Judgelight" \
 	--targets "ARM;AArch64;X86" \
 	"$repo_flag" \
 	--pgo \
-	--lto full
+	--lto thin
 
 # Build binutils
 msg "Building binutils..."
